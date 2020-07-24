@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "146598281387",
+    "firebase_url": "https://testing-covid.firebaseio.com",
+    "project_id": "testing-covid",
+    "storage_bucket": "testing-covid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146598281387:android:fbfde496b08006a01db7ee",
+        "android_client_info": {
+          "package_name": "com.example.testing_covid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146598281387-ldp1v1fhcgu0dqs8f319q5ppjc56mo4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYLAKzfVcTqj5dBR4tS3eShYFwyWOFGp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146598281387-ldp1v1fhcgu0dqs8f319q5ppjc56mo4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
