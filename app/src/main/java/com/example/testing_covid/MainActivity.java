@@ -1,7 +1,10 @@
 package com.example.testing_covid;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.example.testing_covid.Xray.XrayActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,5 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
+    }
+
+    public void exp(View view) {
+        startActivity(new Intent(MainActivity.this, XrayActivity.class));
     }
 }

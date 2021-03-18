@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
@@ -23,7 +24,7 @@
                 android:id="@+id/timeline"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/background_gradient"
+                android:background="#AFC3AB"
                 android:layout_below="@id/home_bar"
                 android:padding="16dp"
                 android:layout_height="150dp">
@@ -46,6 +47,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_centerInParent="true"
+
                 android:layout_marginRight="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="140dp"
@@ -193,14 +195,110 @@
 
             </androidx.cardview.widget.CardView>
 
+            <LinearLayout
+                android:id="@+id/main_card"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:layout_below="@id/card_view"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view11"
+                    android:layout_below="@+id/timeline"
+                    android:layout_gravity="center"
+                    card_view:cardBackgroundColor="#F4C2C2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="14dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="X-ray Analysis"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/g1"
+                            android:layout_below="@id/g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select the X-ray to calculate"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/g2"
+                            android:layout_below="@id/g1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="your covid-19 accuracy"
+                            android:paddingLeft="10dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <Button
+                            android:id="@+id/ex"
+                            android:layout_below="@+id/g2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="20dp"
+                            android:onClick="exp"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/back_button"
+                            android:textSize="16dp"
+                            android:text="Explore"/>
+
+                    </RelativeLayout>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Services"
+                android:layout_below="@id/main_card"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+
+
+
             <HorizontalScrollView
                 android:id="@+id/display_items"
                 android:layout_width="match_parent"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_height="match_parent"
-                android:layout_below="@+id/card_view">
+                android:layout_below="@+id/ser">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -290,10 +388,11 @@
                 android:padding="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                card_view:cardBackgroundColor="#F7D78C"
                 android:layout_marginRight="10dp"
                 android:layout_below="@+id/display_items"
                 android:layout_height="wrap_content"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="14dp">
 
                 <TextView
                     android:id="@+id/title"
@@ -301,20 +400,22 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="What Is COVID-19?"
+                    android:padding="10dp"
                     android:textStyle="bold"
                     android:layout_below="@+id/display_items"
                     android:textSize="20dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/white"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
+                    android:padding="10dp"
                     android:layout_marginLeft="10dp"
                     android:text="A coronavirus is a kind of common virus that causes an infection in your nose, sinuses, or upper throat. Most coronaviruses aren't dangerous.COVID-19 is a disease that can cause what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses, nose, and throat) or lower respiratory tract (windpipe and lungs). It's caused by a coronavirus named SARS-CoV-2."
                     android:layout_below="@+id/title"
                     android:textSize="16dp"
-                    android:textColor="@android:color/black"/>
+                    android:textColor="@android:color/white"/>
 
 
             </androidx.cardview.widget.CardView>

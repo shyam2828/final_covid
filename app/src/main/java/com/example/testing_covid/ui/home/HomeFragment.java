@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ import com.example.testing_covid.OnlineDoctorAppoinment.OnlineDoctorActivity;
 import com.example.testing_covid.R;
 import com.example.testing_covid.ServiceLinkages.ServiceLinkagesActivity;
 import com.example.testing_covid.UserDetails.LoginActivity;
+import com.example.testing_covid.Xray.XrayActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONException;
@@ -44,6 +46,7 @@ public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickL
     CardView card1,card2,card3,card4,card5,card6;
 
     TextView tvCases,tvRecovered,tvCritical,tvActive,tvTodayCases,tvTotalDeaths;
+    Button ex;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -54,6 +57,8 @@ public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickL
         menu=view.findViewById(R.id.menu);
         maps=view.findViewById(R.id.maps);
 
+        ex=view.findViewWithTag(R.id.ex);
+
         card1=view.findViewById(R.id.card1);
         card2=view.findViewById(R.id.card2);
         card3=view.findViewById(R.id.card3);
@@ -63,6 +68,13 @@ public class HomeFragment extends Fragment implements PopupMenu.OnMenuItemClickL
         tvCases=view.findViewById(R.id.con);
         tvRecovered=view.findViewById(R.id.rec);
         tvTotalDeaths=view.findViewById(R.id.dec);
+
+        /*ex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), XrayActivity.class));
+            }
+        });*/
 
 
         card1.setOnClickListener(new View.OnClickListener() {
